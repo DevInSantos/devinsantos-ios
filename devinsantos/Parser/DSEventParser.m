@@ -18,13 +18,14 @@
     for (NSDictionary *_event in JSON) {
         
         DSEvent *event = [[DSEvent alloc] init];
-        event.name = [JSON valueForKey:@"name"];
-        event.description = [JSON valueForKey:@"description"];
-        event.date = [JSON valueForKey:@"date"];
-        event.address = [JSON valueForKey:@"address"];
-        event.place = [JSON valueForKey:@"place"];
+        event.name = [_event valueForKey:@"name"];
+        event.description = [_event valueForKey:@"description"];
+        event.date = [_event valueForKey:@"date"];
+        event.address = [_event valueForKey:@"address"];
+        event.place = [_event valueForKey:@"place"];
         
         [events addObject:event];
+        event = nil;
     }
     
     return events;

@@ -20,6 +20,7 @@
 		E15C1BA51630821300575866 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15C1BA31630821300575866 /* MainStoryboard.storyboard */; };
 		E15C1BA81630821300575866 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BA71630821300575866 /* DSViewController.m */; };
 		E15C1BBD1630968100575866 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1BBC1630968100575866 /* MapKit.framework */; };
+		E15C1BC11630987D00575866 /* DSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BC01630987D00575866 /* DSEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		E15C1BA71630821300575866 /* DSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
 		E15C1BB21630873C00575866 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		E15C1BBC1630968100575866 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E15C1BBF1630987D00575866 /* DSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSEvent.h; path = Models/DSEvent.h; sourceTree = "<group>"; };
+		E15C1BC01630987D00575866 /* DSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSEvent.m; path = Models/DSEvent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 		E15C1B911630821300575866 /* devinsantos */ = {
 			isa = PBXGroup;
 			children = (
+				E15C1BBE1630983F00575866 /* Models */,
 				E15C1B9A1630821300575866 /* DSAppDelegate.h */,
 				E15C1B9B1630821300575866 /* DSAppDelegate.m */,
 				E15C1BA31630821300575866 /* MainStoryboard.storyboard */,
@@ -135,6 +139,15 @@
 				E15C1BBA1630873C00575866 /* libPods.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E15C1BBE1630983F00575866 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E15C1BBF1630987D00575866 /* DSEvent.h */,
+				E15C1BC01630987D00575866 /* DSEvent.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +254,7 @@
 				E15C1B981630821300575866 /* main.m in Sources */,
 				E15C1B9C1630821300575866 /* DSAppDelegate.m in Sources */,
 				E15C1BA81630821300575866 /* DSViewController.m in Sources */,
+				E15C1BC11630987D00575866 /* DSEvent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

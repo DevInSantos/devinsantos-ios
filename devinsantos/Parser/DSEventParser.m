@@ -24,7 +24,7 @@
         event.address = [JSON valueForKey:@"address"];
         event.place = [JSON valueForKey:@"place"];
         
-        [events addObject:_event];
+        [events addObject:event];
     }
     
     return events;

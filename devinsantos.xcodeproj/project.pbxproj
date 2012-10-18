@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4CD0D840714D65B999DCED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CF246CF6BA748ADB1C83F22 /* libPods.a */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -20,11 +21,23 @@
 		E15C1BA81630821300575866 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BA71630821300575866 /* DSViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E15C1BB91630873C00575866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15C1BB21630873C00575866 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 76620D8B63E043BCAD6EBC6C;
+			remoteInfo = Pods;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6F0D53ED4B82411B8C3DDB98 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		7CF246CF6BA748ADB1C83F22 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E15C1B8F1630821300575866 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E15C1B8F1630821300575866 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E15C1B931630821300575866 /* devinsantos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "devinsantos-Info.plist"; sourceTree = "<group>"; };
 		E15C1B951630821300575866 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E15C1B971630821300575866 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,6 +50,7 @@
 		E15C1BA41630821300575866 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E15C1BA61630821300575866 /* DSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
 		E15C1BA71630821300575866 /* DSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
+		E15C1BB21630873C00575866 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 				E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */,
 				E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */,
 				E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */,
+				4F4CD0D840714D65B999DCED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +74,7 @@
 				E15C1B911630821300575866 /* devinsantos */,
 				E15C1B8A1630821300575866 /* Frameworks */,
 				E15C1B881630821300575866 /* Products */,
+				6F0D53ED4B82411B8C3DDB98 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,9 +89,11 @@
 		E15C1B8A1630821300575866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E15C1BB21630873C00575866 /* Pods.xcodeproj */,
 				E15C1B8B1630821300575866 /* UIKit.framework */,
 				E15C1B8D1630821300575866 /* Foundation.framework */,
 				E15C1B8F1630821300575866 /* CoreGraphics.framework */,
+				7CF246CF6BA748ADB1C83F22 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,6 +125,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E15C1BB31630873C00575866 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E15C1BBA1630873C00575866 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +143,7 @@
 				E15C1B831630821300575866 /* Sources */,
 				E15C1B841630821300575866 /* Frameworks */,
 				E15C1B851630821300575866 /* Resources */,
+				2D2E86BF864B4C73A97B72BB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,12 +174,28 @@
 			mainGroup = E15C1B7C1630821300575866;
 			productRefGroup = E15C1B881630821300575866 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E15C1BB31630873C00575866 /* Products */;
+					ProjectRef = E15C1BB21630873C00575866 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E15C1B861630821300575866 /* devinsantos */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E15C1BBA1630873C00575866 /* libPods.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPods.a;
+			remoteRef = E15C1BB91630873C00575866 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E15C1B851630821300575866 /* Resources */ = {
@@ -168,6 +211,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D2E86BF864B4C73A97B72BB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E15C1B831630821300575866 /* Sources */ = {
@@ -253,10 +313,12 @@
 		};
 		E15C1BAC1630821300575866 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0D53ED4B82411B8C3DDB98 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "devinsantos/devinsantos-Prefix.pch";
 				INFOPLIST_FILE = "devinsantos/devinsantos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -264,10 +326,12 @@
 		};
 		E15C1BAD1630821300575866 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F0D53ED4B82411B8C3DDB98 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "devinsantos/devinsantos-Prefix.pch";
 				INFOPLIST_FILE = "devinsantos/devinsantos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -292,6 +356,7 @@
 				E15C1BAD1630821300575866 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

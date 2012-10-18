@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DSViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
 
 @end

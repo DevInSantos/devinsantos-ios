@@ -23,23 +23,89 @@
         <!--View Controller-->
         <scene sceneID="OHr-st-0ey">
             <objects>
-                <viewController id="emo-nL-U9w" sceneMemberID="viewController">
+                <viewController id="emo-nL-U9w" customClass="DSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFS-1c-1kA">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday, November 10, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXC-Hs-pSh">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="cW5-HA-xlg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="8:00 AM To 7:00 PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-cW-omE">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Unimonte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDH-U0-C7n">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rua Comendador Martins, 52, Vila Mathias, Santos / SP " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-sf-5WM">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nwl-Vc-Ha7"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXw-dT-BKZ">
+                                <color key="backgroundColor" red="0.15964481461625843" green="0.25414905417612516" blue="0.43152104591836737" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="MoZ-Mk-0hz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Faça sua inscrição">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nwl-Vc-Ha7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0bw-9n-B9P"/>
+                            <constraint firstItem="QDH-U0-C7n" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="95" id="4oT-EL-BPj"/>
+                            <constraint firstItem="JMs-sf-5WM" firstAttribute="leading" secondItem="EXw-dT-BKZ" secondAttribute="leading" type="default" id="52P-wn-pEQ"/>
+                            <constraint firstItem="EXw-dT-BKZ" firstAttribute="top" secondItem="JMs-sf-5WM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ABT-cL-yGd"/>
+                            <constraint firstAttribute="trailing" secondItem="EXw-dT-BKZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q7h-ZK-xlE"/>
+                            <constraint firstItem="gfV-cW-omE" firstAttribute="leading" secondItem="QDH-U0-C7n" secondAttribute="leading" type="default" id="Qkf-MO-sGZ"/>
+                            <constraint firstItem="EXC-Hs-pSh" firstAttribute="leading" secondItem="gfV-cW-omE" secondAttribute="leading" type="default" id="S4W-qB-bV5"/>
+                            <constraint firstAttribute="trailing" secondItem="gfV-cW-omE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VoZ-Au-T2L"/>
+                            <constraint firstAttribute="trailing" secondItem="EXC-Hs-pSh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WLt-6y-OdN"/>
+                            <constraint firstItem="JMs-sf-5WM" firstAttribute="top" secondItem="QDH-U0-C7n" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aCe-gd-ok8"/>
+                            <constraint firstItem="gfV-cW-omE" firstAttribute="top" secondItem="EXC-Hs-pSh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="buL-dn-m5u"/>
+                            <constraint firstAttribute="trailing" secondItem="QDH-U0-C7n" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ea5-FV-IJk"/>
+                            <constraint firstItem="nwl-Vc-Ha7" firstAttribute="leading" secondItem="GFS-1c-1kA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gzv-wG-pCA"/>
+                            <constraint firstAttribute="bottom" secondItem="nwl-Vc-Ha7" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="iOb-Dx-X6B"/>
+                            <constraint firstAttribute="trailing" secondItem="JMs-sf-5WM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="jxH-3S-IBu"/>
+                            <constraint firstItem="nwl-Vc-Ha7" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="216" id="mJP-cx-ZV2"/>
+                            <constraint firstItem="QDH-U0-C7n" firstAttribute="leading" secondItem="JMs-sf-5WM" secondAttribute="leading" type="default" id="qDI-f6-N1H"/>
+                            <constraint firstItem="EXC-Hs-pSh" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rgb-3T-jLm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="smm-eq-3GR"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="JMs-sf-5WM" id="oZl-Yn-b6v"/>
+                        <outlet property="dateLabel" destination="EXC-Hs-pSh" id="0wM-pU-QpX"/>
+                        <outlet property="locationLabel" destination="QDH-U0-C7n" id="nZf-Bm-eFh"/>
+                        <outlet property="timeLabel" destination="gfV-cW-omE" id="82L-lv-QkL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlq-AY-ZIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="-1405"/>
+            <point key="canvasLocation" x="1350" y="-1405"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KVn-TI-wFf">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="z54-mI-5Av" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="bkF-MT-2Zr">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -54,6 +120,20 @@
             <point key="canvasLocation" x="-69" y="-989"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DSViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DSViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

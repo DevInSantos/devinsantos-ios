@@ -26,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setDateLabel:nil];
+    [self setTimeLabel:nil];
+    [self setAddressLabel:nil];
+    [self setLocationLabel:nil];
+    [super viewDidUnload];
+}
 @end

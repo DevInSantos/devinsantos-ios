@@ -63,4 +63,14 @@
     [self setScrollView:nil];
     [super viewDidUnload];
 }
+
+#pragma mark - UIStoryBoardSegue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"mapSegue"]) {
+        
+    }
+}
+
 @end

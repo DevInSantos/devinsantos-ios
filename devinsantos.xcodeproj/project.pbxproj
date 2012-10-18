@@ -22,6 +22,7 @@
 		E15C1BBD1630968100575866 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1BBC1630968100575866 /* MapKit.framework */; };
 		E15C1BC11630987D00575866 /* DSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BC01630987D00575866 /* DSEvent.m */; };
 		E15C1BC51630998100575866 /* DSEventParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BC41630998100575866 /* DSEventParser.m */; };
+		E15C1BCB1630A3A900575866 /* DSMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BCA1630A3A800575866 /* DSMapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		E15C1BC01630987D00575866 /* DSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSEvent.m; path = Models/DSEvent.m; sourceTree = "<group>"; };
 		E15C1BC31630998100575866 /* DSEventParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSEventParser.h; path = Parser/DSEventParser.h; sourceTree = "<group>"; };
 		E15C1BC41630998100575866 /* DSEventParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSEventParser.m; path = Parser/DSEventParser.m; sourceTree = "<group>"; };
+		E15C1BC91630A3A800575866 /* DSMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMapViewController.h; sourceTree = "<group>"; };
+		E15C1BCA1630A3A800575866 /* DSMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				E15C1BA61630821300575866 /* DSViewController.h */,
 				E15C1BA71630821300575866 /* DSViewController.m */,
 				E15C1B921630821300575866 /* Supporting Files */,
+				E15C1BC91630A3A800575866 /* DSMapViewController.h */,
+				E15C1BCA1630A3A800575866 /* DSMapViewController.m */,
 			);
 			path = devinsantos;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				E15C1BA81630821300575866 /* DSViewController.m in Sources */,
 				E15C1BC11630987D00575866 /* DSEvent.m in Sources */,
 				E15C1BC51630998100575866 /* DSEventParser.m in Sources */,
+				E15C1BCB1630A3A900575866 /* DSMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

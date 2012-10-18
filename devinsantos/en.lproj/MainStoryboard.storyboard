@@ -30,7 +30,7 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday, November 10, 2012" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXC-Hs-pSh">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="235" id="cW5-HA-xlg"/>
+                                    <constraint firstAttribute="width" constant="241" id="3Ys-pQ-zPw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -46,7 +46,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rua Comendador Martins, 52, Vila Mathias, Santos / SP " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-sf-5WM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rua Comendador Martins, 52, Vila Mathias, Santos / SP " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="JMs-sf-5WM">
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,16 +66,34 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj5-HC-Vx6">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="85I-Z2-uTf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Mapa">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5ku-OQ-Aho" kind="push" id="uRr-ts-V1Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nwl-Vc-Ha7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0bw-9n-B9P"/>
                             <constraint firstItem="QDH-U0-C7n" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="95" id="4oT-EL-BPj"/>
                             <constraint firstItem="JMs-sf-5WM" firstAttribute="leading" secondItem="EXw-dT-BKZ" secondAttribute="leading" type="default" id="52P-wn-pEQ"/>
+                            <constraint firstItem="EXw-dT-BKZ" firstAttribute="top" secondItem="hj5-HC-Vx6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5ro-NH-cfd"/>
                             <constraint firstItem="EXw-dT-BKZ" firstAttribute="top" secondItem="JMs-sf-5WM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ABT-cL-yGd"/>
                             <constraint firstAttribute="trailing" secondItem="EXw-dT-BKZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q7h-ZK-xlE"/>
                             <constraint firstItem="gfV-cW-omE" firstAttribute="leading" secondItem="QDH-U0-C7n" secondAttribute="leading" type="default" id="Qkf-MO-sGZ"/>
                             <constraint firstItem="EXC-Hs-pSh" firstAttribute="leading" secondItem="gfV-cW-omE" secondAttribute="leading" type="default" id="S4W-qB-bV5"/>
+                            <constraint firstItem="hj5-HC-Vx6" firstAttribute="leading" secondItem="GFS-1c-1kA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="TQ2-w6-uRP"/>
                             <constraint firstAttribute="trailing" secondItem="gfV-cW-omE" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VoZ-Au-T2L"/>
                             <constraint firstAttribute="trailing" secondItem="EXC-Hs-pSh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WLt-6y-OdN"/>
                             <constraint firstItem="JMs-sf-5WM" firstAttribute="top" secondItem="QDH-U0-C7n" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aCe-gd-ok8"/>
@@ -101,6 +119,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mlq-AY-ZIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1350" y="-1405"/>
+        </scene>
+        <!--View Controller - Hotel Unimonte-->
+        <scene sceneID="hgx-ib-tnR">
+            <objects>
+                <viewController id="5ku-OQ-Aho" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vIJ-kj-Rjn">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-Wf-XA8"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zUL-Wf-XA8" firstAttribute="top" secondItem="vIJ-kj-Rjn" secondAttribute="top" type="default" id="3dN-ty-ML6"/>
+                            <constraint firstItem="zUL-Wf-XA8" firstAttribute="bottom" secondItem="vIJ-kj-Rjn" secondAttribute="bottom" type="default" id="Tio-ei-Hya"/>
+                            <constraint firstItem="zUL-Wf-XA8" firstAttribute="leading" secondItem="vIJ-kj-Rjn" secondAttribute="leading" type="default" id="m1J-OD-kR9"/>
+                            <constraint firstItem="zUL-Wf-XA8" firstAttribute="trailing" secondItem="vIJ-kj-Rjn" secondAttribute="trailing" type="default" id="wta-i5-rAE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hotel Unimonte" id="Rp0-xc-FFd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPE-Im-eTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="-1405"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KVn-TI-wFf">

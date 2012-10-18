@@ -19,6 +19,7 @@
 		E15C1BA21630821300575866 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E15C1BA11630821300575866 /* Default-568h@2x.png */; };
 		E15C1BA51630821300575866 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15C1BA31630821300575866 /* MainStoryboard.storyboard */; };
 		E15C1BA81630821300575866 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15C1BA71630821300575866 /* DSViewController.m */; };
+		E15C1BBD1630968100575866 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1BBC1630968100575866 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E15C1BA61630821300575866 /* DSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
 		E15C1BA71630821300575866 /* DSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
 		E15C1BB21630873C00575866 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		E15C1BBC1630968100575866 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15C1BBD1630968100575866 /* MapKit.framework in Frameworks */,
 				E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */,
 				E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */,
 				E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */,
@@ -71,6 +74,7 @@
 		E15C1B7C1630821300575866 = {
 			isa = PBXGroup;
 			children = (
+				E15C1BBC1630968100575866 /* MapKit.framework */,
 				E15C1B911630821300575866 /* devinsantos */,
 				E15C1B8A1630821300575866 /* Frameworks */,
 				E15C1B881630821300575866 /* Products */,

@@ -75,4 +75,9 @@
     }
 }
 
+- (IBAction)eventSubscription {
+    DSEvent *event = [array objectAtIndex:0];
+    NSURL *url = [NSURL URLWithString:event.subscriptionUrl];
+    [[UIApplication sharedApplication] openURL:url];
+}
 @end

@@ -14,4 +14,5 @@
 @property (strong) NSString *description;
 @property (strong) NSString *name;
 @property (strong) NSString *place;
+@property (strong) NSString *subscriptionUrl;
 @end

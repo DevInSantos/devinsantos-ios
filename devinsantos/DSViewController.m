@@ -7,6 +7,7 @@
 //
 
 #import "DSViewController.h"
+#import "AFNetworking.h"
 
 @interface DSViewController ()
 
@@ -14,8 +15,22 @@
 
 @implementation DSViewController
 
+- (void)loadEvents
+{
+    NSURL *url = [NSURL URLWithString:@"http://devinsantos-events.herokuapp.com/events.json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"%@", JSON);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        
+    }];
+    
+    [operation start];
+}
+
 - (void)viewDidLoad
 {
+    [self loadEvents];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

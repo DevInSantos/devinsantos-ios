@@ -8,9 +8,13 @@
 
 #import "DSViewController.h"
 #import "AFNetworking.h"
+#import "DSEventParser.h"
+#import "DSEvent.h"
 
 @interface DSViewController ()
-
+{
+    NSArray *array;
+}
 @end
 
 @implementation DSViewController
@@ -20,12 +24,22 @@
     NSURL *url = [NSURL URLWithString:@"http://devinsantos-events.herokuapp.com/events.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"%@", JSON);
+        array = [NSArray arrayWithArray:[DSEventParser parseEventWithJSON:JSON]];
+        [self mountView];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         
     }];
     
     [operation start];
+}
+
+- (void)mountView
+{
+    DSEvent *event = [array objectAtIndex:0];
+
+    self.dateLabel.text = event.date;
+    self.placeLabel.text = event.place;
+    self.addressLabel.text = event.address;
 }
 
 - (void)viewDidLoad
@@ -45,7 +59,7 @@
     [self setDateLabel:nil];
     [self setTimeLabel:nil];
     [self setAddressLabel:nil];
-    [self setLocationLabel:nil];
+    [self setPlaceLabel:nil];
     [self setScrollView:nil];
     [super viewDidUnload];
 }

@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "DSEventParser.h"
 #import "DSEvent.h"
+#import "DSMapViewController.h"
 
 @interface DSViewController ()
 {
@@ -69,7 +70,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"mapSegue"]) {
-        
+        DSMapViewController *map = (DSMapViewController *)[segue destinationViewController];
+        map.event = [array objectAtIndex:0];
     }
 }
 

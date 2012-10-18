@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="803" y="-1405"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - DevInSantos-->
         <scene sceneID="OHr-st-0ey">
             <objects>
                 <viewController id="emo-nL-U9w" customClass="DSViewController" sceneMemberID="viewController">
@@ -89,11 +89,12 @@
                             <constraint firstItem="EXC-Hs-pSh" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rgb-3T-jLm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="smm-eq-3GR"/>
+                    <navigationItem key="navigationItem" title="DevInSantos" id="smm-eq-3GR"/>
                     <connections>
                         <outlet property="addressLabel" destination="JMs-sf-5WM" id="oZl-Yn-b6v"/>
                         <outlet property="dateLabel" destination="EXC-Hs-pSh" id="0wM-pU-QpX"/>
                         <outlet property="locationLabel" destination="QDH-U0-C7n" id="nZf-Bm-eFh"/>
+                        <outlet property="scrollView" destination="nwl-Vc-Ha7" id="WMc-UL-agF"/>
                         <outlet property="timeLabel" destination="gfV-cW-omE" id="82L-lv-QkL"/>
                     </connections>
                 </viewController>
@@ -117,7 +118,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsY-j8-QAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-69" y="-989"/>
+            <point key="canvasLocation" x="242" y="-703"/>
         </scene>
     </scenes>
     <classes>
@@ -127,6 +128,7 @@
                 <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="locationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="timeLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

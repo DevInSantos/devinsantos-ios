@@ -31,6 +31,7 @@
     [self setTimeLabel:nil];
     [self setAddressLabel:nil];
     [self setLocationLabel:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 @end

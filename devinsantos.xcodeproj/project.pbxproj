@@ -45,6 +45,7 @@
 		E105627E1631B9C100448A30 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562751631B9C100448A30 /* whiteArrow@2x.png */; };
 		E105628A1631BF3900448A30 /* speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562891631BF3900448A30 /* speakers.png */; };
 		E105628C1631C4AC00448A30 /* iOS5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */; };
+		E10562921631FAFE00448A30 /* DSSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562911631FAFE00448A30 /* DSSponsor.m */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -121,6 +122,8 @@
 		E10562751631B9C100448A30 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		E10562891631BF3900448A30 /* speakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speakers.png; path = images/speakers.png; sourceTree = "<group>"; };
 		E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iOS5Storyboard.storyboard; path = ../iOS5Storyboard.storyboard; sourceTree = "<group>"; };
+		E10562901631FAFE00448A30 /* DSSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSponsor.h; path = Models/DSSponsor.h; sourceTree = "<group>"; };
+		E10562911631FAFE00448A30 /* DSSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSponsor.m; path = Models/DSSponsor.m; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -353,6 +356,8 @@
 				E15C1BC01630987D00575866 /* DSEvent.m */,
 				E105622E163136AA00448A30 /* DSTwitter.h */,
 				E105622F163136AA00448A30 /* DSTwitter.m */,
+				E10562901631FAFE00448A30 /* DSSponsor.h */,
+				E10562911631FAFE00448A30 /* DSSponsor.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				E1056230163136AA00448A30 /* DSTwitter.m in Sources */,
 				E10562461631405A00448A30 /* LoadingView.m in Sources */,
 				E10562761631B9C100448A30 /* EGORefreshTableHeaderView.m in Sources */,
+				E10562921631FAFE00448A30 /* DSSponsor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

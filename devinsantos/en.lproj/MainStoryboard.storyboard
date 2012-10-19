@@ -25,7 +25,7 @@
             <objects>
                 <viewController id="emo-nL-U9w" customClass="DSViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GFS-1c-1kA">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dev in Santos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYd-As-PfR">
@@ -38,7 +38,7 @@
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Saturday, November 10, 2012" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuM-H1-A3v">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="ZfI-LQ-3Ub"/>
+                                    <constraint firstAttribute="height" constant="21" type="user" id="ZfI-LQ-3Ub"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rX-RG-iP0">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="E1H-BC-vGW"/>
-                                    <constraint firstAttribute="height" constant="64" id="mGi-Ul-Xvy"/>
+                                    <constraint firstAttribute="height" constant="64" type="user" id="mGi-Ul-Xvy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="Map.png">
@@ -71,15 +71,23 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvl-TC-yRN">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" type="user" id="Gue-aS-8Fk"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WYd-As-PfR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Rrw-5i-Rqn"/>
-                            <constraint firstItem="FuM-H1-A3v" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="63" id="U1Q-Md-WaB"/>
+                            <constraint firstItem="FuM-H1-A3v" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="63" type="user" id="U1Q-Md-WaB"/>
                             <constraint firstItem="WYd-As-PfR" firstAttribute="top" secondItem="GFS-1c-1kA" secondAttribute="top" constant="20" symbolic="YES" type="default" id="XqP-xT-H5c"/>
+                            <constraint firstItem="dvl-TC-yRN" firstAttribute="top" secondItem="0rX-RG-iP0" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="ZEU-PQ-KcN"/>
+                            <constraint firstItem="dvl-TC-yRN" firstAttribute="leading" secondItem="GFS-1c-1kA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Zf9-Dv-0LG"/>
                             <constraint firstItem="M7K-3J-bKB" firstAttribute="leading" secondItem="GFS-1c-1kA" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c8F-6V-JTY"/>
                             <constraint firstAttribute="trailing" secondItem="FuM-H1-A3v" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="chC-4y-Ct9"/>
-                            <constraint firstItem="0rX-RG-iP0" firstAttribute="top" secondItem="FuM-H1-A3v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cov-Ie-kLv"/>
+                            <constraint firstItem="0rX-RG-iP0" firstAttribute="top" secondItem="FuM-H1-A3v" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="cov-Ie-kLv"/>
+                            <constraint firstAttribute="trailing" secondItem="dvl-TC-yRN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eGo-E7-9VY"/>
                             <constraint firstItem="M7K-3J-bKB" firstAttribute="top" secondItem="FuM-H1-A3v" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nvf-0H-Nsm"/>
                             <constraint firstAttribute="trailing" secondItem="0rX-RG-iP0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="qyp-am-ZKQ"/>
                             <constraint firstItem="0rX-RG-iP0" firstAttribute="leading" secondItem="M7K-3J-bKB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sEO-wx-CA0"/>
@@ -91,6 +99,7 @@
                     <connections>
                         <outlet property="addressTextView" destination="M7K-3J-bKB" id="9dA-kl-iGg"/>
                         <outlet property="dateLabel" destination="FuM-H1-A3v" id="gYo-5e-qfn"/>
+                        <outlet property="scrollView" destination="dvl-TC-yRN" id="4LG-qh-JqL"/>
                         <outlet property="titleLabel" destination="WYd-As-PfR" id="HQ2-wY-1cb"/>
                     </connections>
                 </viewController>
@@ -135,7 +144,7 @@
             <objects>
                 <viewController id="E5o-TD-SmL" customClass="DSTwitterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7vu-oN-Eaz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-m3-sgR">
@@ -222,7 +231,7 @@
             <objects>
                 <viewController id="y84-GO-oUX" customClass="DSSpeakersViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTa-RW-ska">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -237,7 +246,7 @@
             <objects>
                 <viewController id="5ku-OQ-Aho" customClass="DSMapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vIJ-kj-Rjn">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-Wf-XA8">
@@ -320,6 +329,7 @@
                 <relationship kind="action" name="eventSubscription"/>
                 <relationship kind="outlet" name="addressTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -330,6 +340,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

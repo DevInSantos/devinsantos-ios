@@ -10,13 +10,17 @@
 #import "AFNetworking.h"
 #import "DSEventParser.h"
 #import "DSEvent.h"
+#import "DSSponsorParser.h"
+#import "DSSponsor.h"
 #import "DSMapViewController.h"
 #import "LoadingView.h"
 
 @interface DSViewController ()
 {
-    NSArray *array;
+    NSArray *eventsArray;
+    NSArray *sponsorssArray;
     LoadingView *loadingView;
+    int nextSponsor;
 }
 - (NSDateComponents *)formatDate:(NSString *)date;
 - (NSString *)dayOfWeek:(int)weekday;
@@ -32,10 +36,10 @@
     NSURL *url = [NSURL URLWithString:@"http://devinsantos-events.herokuapp.com/events.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        array = [NSArray arrayWithArray:[DSEventParser parseEventWithJSON:JSON]];
+        eventsArray = [NSArray arrayWithArray:[DSEventParser parseEventWithJSON:JSON]];
         [self mountView];
+        [self loadSponsors];
         [loadingView hideAnimated:YES];
-
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         [loadingView hideAnimated:YES];
 
@@ -44,9 +48,69 @@
     [operation start];
 }
 
+- (void)loadSponsors
+{
+    [loadingView showOnView:self.navigationController.view animated:YES];
+    DSEvent *event = [eventsArray objectAtIndex:0];
+    NSString *urlString = [NSString stringWithFormat:@"http://devinsantos-events.herokuapp.com/events/%d/sponsors.json", event.eventId];
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        sponsorssArray = [NSArray arrayWithArray:[DSSponsorParser parseSponsorWithJSON:JSON]];
+        [loadingView hideAnimated:YES];
+        [self mountSponsorsCarrousel];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        [loadingView hideAnimated:YES];
+        
+    }];
+    
+    [operation start];
+}
+
+- (void)mountSponsorsCarrousel
+{
+    int i = 0;
+    for (DSSponsor *sponsor in sponsorssArray) {
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.frame = CGRectMake(self.scrollView.frame.size.width * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin|
+                                      UIViewAutoresizingFlexibleWidth|
+                                      UIViewAutoresizingFlexibleRightMargin|
+                                      UIViewAutoresizingFlexibleTopMargin|
+                                      UIViewAutoresizingFlexibleHeight|
+                                      UIViewAutoresizingFlexibleBottomMargin);
+
+        NSURL *url = [NSURL URLWithString:sponsor.logo];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            imageView.image = image;
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+
+        }];
+        
+        [self.scrollView addSubview:imageView];
+        imageView = nil;
+        i++;
+    }
+    [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * sponsorssArray.count, self.scrollView.frame.size.height)];
+    [self sponsorsCarrouselStartAnimate];    
+}
+
+- (void)sponsorsCarrouselStartAnimate
+{
+    if (nextSponsor >= sponsorssArray.count || !nextSponsor) {
+        nextSponsor = 0;
+    }
+    NSLog(@"%d", nextSponsor);
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * nextSponsor, 0)];
+    [self performSelector:_cmd withObject:nil afterDelay:4];
+    nextSponsor++;
+}
+
 - (void)mountView
 {
-    DSEvent *event = [array objectAtIndex:0];
+    DSEvent *event = [eventsArray objectAtIndex:0];
     NSDateComponents *dateComponents = [self formatDate:event.date];
     self.titleLabel.text = event.name;
     self.addressTextView.text = event.address;
@@ -165,6 +229,7 @@
     [self setTitleLabel:nil];
     [self setDateLabel:nil];
     [self setAddressTextView:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
 }
 
@@ -174,12 +239,12 @@
 {
     if ([segue.identifier isEqualToString:@"mapSegue"]) {
         DSMapViewController *map = (DSMapViewController *)[segue destinationViewController];
-        map.event = [array objectAtIndex:0];
+        map.event = [eventsArray objectAtIndex:0];
     }
 }
 
 - (IBAction)eventSubscription {
-    DSEvent *event = [array objectAtIndex:0];
+    DSEvent *event = [eventsArray objectAtIndex:0];
     NSURL *url = [NSURL URLWithString:event.subscriptionUrl];
     [[UIApplication sharedApplication] openURL:url];
 }

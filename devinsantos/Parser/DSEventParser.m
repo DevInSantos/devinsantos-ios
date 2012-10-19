@@ -24,6 +24,7 @@
         event.address = [_event valueForKey:@"address"];
         event.place = [_event valueForKey:@"place"];
         event.subscriptionUrl = [_event valueForKey:@"url"];
+        event.eventId = [[_event valueForKey:@"id"] intValue];
         [events addObject:event];
         event = nil;
     }

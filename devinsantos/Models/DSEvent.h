@@ -15,4 +15,5 @@
 @property (strong) NSString *name;
 @property (strong) NSString *place;
 @property (strong) NSString *subscriptionUrl;
+@property (nonatomic) int eventId;
 @end

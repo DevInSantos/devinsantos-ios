@@ -75,12 +75,7 @@
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.frame = CGRectMake(self.scrollView.frame.size.width * i, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
         imageView.contentMode = UIViewContentModeScaleAspectFit;
-        imageView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin|
-                                      UIViewAutoresizingFlexibleWidth|
-                                      UIViewAutoresizingFlexibleRightMargin|
-                                      UIViewAutoresizingFlexibleTopMargin|
-                                      UIViewAutoresizingFlexibleHeight|
-                                      UIViewAutoresizingFlexibleBottomMargin);
+
 
         NSURL *url = [NSURL URLWithString:sponsor.logo];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

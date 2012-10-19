@@ -16,6 +16,7 @@
 {
     NSArray *array;
 }
+- (NSDateComponents *)formatDate:(NSString *)date;
 @end
 
 @implementation DSViewController
@@ -37,12 +38,25 @@
 - (void)mountView
 {
     DSEvent *event = [array objectAtIndex:0];
-
-    self.dateLabel.text = event.date;
-    self.placeLabel.text = event.place;
-    self.addressLabel.text = event.address;
+    
+    self.title = event.name;
+    NSDateComponents *dateComponents = [self formatDate:event.date];
+    self.calendarDay.text = [NSString stringWithFormat:@"%02i", dateComponents.day];
+    
 }
 
+- (NSDateComponents *)formatDate:(NSString *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'-02:00'"];
+    NSDate *_date = [dateFormatter dateFromString:date];
+    
+    NSUInteger flags = NSDayCalendarUnit | kCFCalendarUnitMonth | kCFCalendarUnitYear| NSHourCalendarUnit | NSMinuteCalendarUnit;
+    
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:flags fromDate:_date];
+    
+    return dateComponents;
+}
 - (void)viewDidLoad
 {
     [self loadEvents];
@@ -57,11 +71,8 @@
 }
 
 - (void)viewDidUnload {
-    [self setDateLabel:nil];
-    [self setTimeLabel:nil];
-    [self setAddressLabel:nil];
-    [self setPlaceLabel:nil];
     [self setScrollView:nil];
+    [self setCalendarDay:nil];
     [super viewDidUnload];
 }
 

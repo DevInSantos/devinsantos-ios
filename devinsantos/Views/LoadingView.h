@@ -13,6 +13,7 @@
 - (void)showOnView:(UIView *)view animated:(BOOL)animated;
 - (void)showOnView:(UIView *)view frame:(CGRect)frame animated:(BOOL)animated;
 - (void)showOnView:(UIView *)view frame:(CGRect)frame belowSubview:(UIView *)subview animated:(BOOL)animated;
+
 - (void)hideAnimated:(BOOL)animated;
 
 @end

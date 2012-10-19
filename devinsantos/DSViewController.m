@@ -69,6 +69,7 @@
 
 - (void)mountSponsorsCarrousel
 {
+    [loadingView showOnView:self.navigationController.view animated:YES];
     int i = 0;
     for (DSSponsor *sponsor in sponsorssArray) {
         UIImageView *imageView = [[UIImageView alloc] init];
@@ -86,7 +87,7 @@
         [imageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
             imageView.image = image;
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-
+            [loadingView hideAnimated:YES];
         }];
         
         [self.scrollView addSubview:imageView];
@@ -94,7 +95,8 @@
         i++;
     }
     [self.scrollView setContentSize:CGSizeMake(self.scrollView.frame.size.width * sponsorssArray.count, self.scrollView.frame.size.height)];
-    [self sponsorsCarrouselStartAnimate];    
+    [self sponsorsCarrouselStartAnimate];
+    [loadingView hideAnimated:YES];
 }
 
 - (void)sponsorsCarrouselStartAnimate

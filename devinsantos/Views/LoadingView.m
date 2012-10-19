@@ -39,7 +39,7 @@
     return self;
 }
 
-- (void)showOnView:(UIView *)view animated:(BOOL)animated
+- (void)showOnView:(UIView *)view animated:(BOOL)animated 
 {
     [self showOnView:view frame:CGRectMake(270, 22, view.bounds.size.width, view.bounds.size.height) animated:animated];
 }

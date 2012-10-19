@@ -61,7 +61,7 @@
                                     <segue destination="5ku-OQ-Aho" kind="push" identifier="mapSegue" id="yiz-Yd-AfJ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7K-3J-bKB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7K-3J-bKB">
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.21176470588235294" blue="0.19607843137254902" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="X0J-Vf-c6c"/>

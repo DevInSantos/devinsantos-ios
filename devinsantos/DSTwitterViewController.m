@@ -93,7 +93,7 @@
 
 -(UIImage*)scaleTheImage:(UIImage*)image
 {
-    CGSize size = CGSizeMake(80, 80);
+    CGSize size = CGSizeMake(70, 70);
     UIGraphicsBeginImageContext(size);
     [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
     UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();

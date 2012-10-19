@@ -38,8 +38,6 @@
 - (void)mountView
 {
     DSEvent *event = [array objectAtIndex:0];
-    
-    self.title = event.name;
     NSDateComponents *dateComponents = [self formatDate:event.date];
     self.calendarDay.text = [NSString stringWithFormat:@"%02i", dateComponents.day];
     

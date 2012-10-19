@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="803" y="-1405"/>
         </scene>
-        <!--View Controller - DevInSantos-->
+        <!--View Controller-->
         <scene sceneID="OHr-st-0ey">
             <objects>
                 <viewController id="emo-nL-U9w" customClass="DSViewController" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                             <constraint firstItem="WjS-5V-VAn" firstAttribute="trailing" secondItem="QDL-g8-Gp2" secondAttribute="trailing" type="default" id="yFk-yb-OOe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="DevInSantos" id="smm-eq-3GR"/>
+                    <navigationItem key="navigationItem" id="smm-eq-3GR"/>
                     <connections>
                         <outlet property="calendarDay" destination="QDL-g8-Gp2" id="cTe-1C-VN1"/>
                         <outlet property="scrollView" destination="nwl-Vc-Ha7" id="WMc-UL-agF"/>
@@ -113,7 +113,7 @@
             </objects>
             <point key="canvasLocation" x="1350" y="-1405"/>
         </scene>
-        <!--Map View Controller - Hotel Unimonte-->
+        <!--Map View Controller-->
         <scene sceneID="hgx-ib-tnR">
             <objects>
                 <viewController id="5ku-OQ-Aho" customClass="DSMapViewController" sceneMemberID="viewController">
@@ -131,7 +131,7 @@
                             <constraint firstItem="zUL-Wf-XA8" firstAttribute="trailing" secondItem="vIJ-kj-Rjn" secondAttribute="trailing" type="default" id="wta-i5-rAE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hotel Unimonte" id="Rp0-xc-FFd"/>
+                    <navigationItem key="navigationItem" id="Rp0-xc-FFd"/>
                     <connections>
                         <outlet property="mapView" destination="zUL-Wf-XA8" id="SOe-K5-hGv"/>
                     </connections>

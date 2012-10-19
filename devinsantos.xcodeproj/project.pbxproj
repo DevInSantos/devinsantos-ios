@@ -17,6 +17,9 @@
 		E10561E516310E0A00448A30 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561E416310E0A00448A30 /* Default.png */; };
 		E10561E716310E0C00448A30 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561E616310E0C00448A30 /* Default@2x.png */; };
 		E10561E916310E0F00448A30 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561E816310E0F00448A30 /* Default-568h@2x.png */; };
+		E10561EC1631106200448A30 /* navBar.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561EA1631106200448A30 /* navBar.png */; };
+		E10561ED1631106200448A30 /* navBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561EB1631106200448A30 /* navBar@2x.png */; };
+		E10561EF163111B000448A30 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E10561EE163111B000448A30 /* backButton.png */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -58,6 +61,9 @@
 		E10561E416310E0A00448A30 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E10561E616310E0C00448A30 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E10561E816310E0F00448A30 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E10561EA1631106200448A30 /* navBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navBar.png; path = images/navBar.png; sourceTree = "<group>"; };
+		E10561EB1631106200448A30 /* navBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navBar@2x.png"; path = "images/navBar@2x.png"; sourceTree = "<group>"; };
+		E10561EE163111B000448A30 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = images/backButton.png; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +113,9 @@
 		E10561D31630F5BC00448A30 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E10561EE163111B000448A30 /* backButton.png */,
+				E10561EA1631106200448A30 /* navBar.png */,
+				E10561EB1631106200448A30 /* navBar@2x.png */,
 				E10561DA163105C700448A30 /* Calendar@2x.png */,
 				E10561DB163105C700448A30 /* Map.png */,
 				E10561DC163105C700448A30 /* Map@2x.png */,
@@ -295,6 +304,9 @@
 				E10561E516310E0A00448A30 /* Default.png in Resources */,
 				E10561E716310E0C00448A30 /* Default@2x.png in Resources */,
 				E10561E916310E0F00448A30 /* Default-568h@2x.png in Resources */,
+				E10561EC1631106200448A30 /* navBar.png in Resources */,
+				E10561ED1631106200448A30 /* navBar@2x.png in Resources */,
+				E10561EF163111B000448A30 /* backButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

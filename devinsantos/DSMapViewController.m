@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad
 {
-    self.title = self.event.place;
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [geocoder geocodeAddressString:self.event.address completionHandler:^(NSArray *placemarks, NSError *error) {
         CLPlacemark *placemark = [placemarks objectAtIndex:0];

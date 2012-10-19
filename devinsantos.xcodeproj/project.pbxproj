@@ -24,6 +24,8 @@
 		E10561F31631163C00448A30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10561F21631163C00448A30 /* QuartzCore.framework */; };
 		E10561F61631231500448A30 /* DSSpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10561F51631231500448A30 /* DSSpeakersViewController.m */; };
 		E10561F9163124E000448A30 /* DSTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10561F8163124E000448A30 /* DSTwitterViewController.m */; };
+		E10562251631338100448A30 /* logo_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562231631338100448A30 /* logo_bar.png */; };
+		E10562261631338100448A30 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562241631338100448A30 /* twitter.png */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -74,6 +76,8 @@
 		E10561F51631231500448A30 /* DSSpeakersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSpeakersViewController.m; sourceTree = "<group>"; };
 		E10561F7163124E000448A30 /* DSTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSTwitterViewController.h; sourceTree = "<group>"; };
 		E10561F8163124E000448A30 /* DSTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTwitterViewController.m; sourceTree = "<group>"; };
+		E10562231631338100448A30 /* logo_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_bar.png; path = images/logo_bar.png; sourceTree = "<group>"; };
+		E10562241631338100448A30 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = images/twitter.png; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +128,8 @@
 		E10561D31630F5BC00448A30 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E10562231631338100448A30 /* logo_bar.png */,
+				E10562241631338100448A30 /* twitter.png */,
 				E10561F01631157800448A30 /* texture.png */,
 				E10561EE163111B000448A30 /* backButton.png */,
 				E10561EA1631106200448A30 /* navBar.png */,
@@ -325,6 +331,8 @@
 				E10561ED1631106200448A30 /* navBar@2x.png in Resources */,
 				E10561EF163111B000448A30 /* backButton.png in Resources */,
 				E10561F11631157800448A30 /* texture.png in Resources */,
+				E10562251631338100448A30 /* logo_bar.png in Resources */,
+				E10562261631338100448A30 /* twitter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
         <scene sceneID="ohU-fL-0dW">
             <objects>
                 <navigationController definesPresentationContext="YES" id="XA2-3M-JBj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="52t-y0-FJe"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="logo_bar.png" id="52t-y0-FJe"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uTL-KA-10E">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -118,7 +118,7 @@
         <scene sceneID="bEp-EP-bBq">
             <objects>
                 <navigationController definesPresentationContext="YES" id="CNc-Cj-7zn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="#devinsantos" id="BHs-4a-W0z"/>
+                    <tabBarItem key="tabBarItem" title="#devinsantos" image="twitter.png" id="BHs-4a-W0z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lJ5-y2-EB3">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -221,6 +221,8 @@
     </scenes>
     <resources>
         <image name="Map.png" width="128" height="128"/>
+        <image name="logo_bar.png" width="30" height="30"/>
+        <image name="twitter.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="DSMapViewController" superclassName="UIViewController">

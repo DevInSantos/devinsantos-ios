@@ -26,6 +26,9 @@
 		E10561F9163124E000448A30 /* DSTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E10561F8163124E000448A30 /* DSTwitterViewController.m */; };
 		E10562251631338100448A30 /* logo_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562231631338100448A30 /* logo_bar.png */; };
 		E10562261631338100448A30 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562241631338100448A30 /* twitter.png */; };
+		E105622A1631357400448A30 /* DSTwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562291631357400448A30 /* DSTwitterViewCell.m */; };
+		E105622D1631367F00448A30 /* DSTwitterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E105622C1631367F00448A30 /* DSTwitterParser.m */; };
+		E1056230163136AA00448A30 /* DSTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = E105622F163136AA00448A30 /* DSTwitter.m */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -78,6 +81,12 @@
 		E10561F8163124E000448A30 /* DSTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSTwitterViewController.m; sourceTree = "<group>"; };
 		E10562231631338100448A30 /* logo_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_bar.png; path = images/logo_bar.png; sourceTree = "<group>"; };
 		E10562241631338100448A30 /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = images/twitter.png; sourceTree = "<group>"; };
+		E10562281631357400448A30 /* DSTwitterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSTwitterViewCell.h; path = Views/DSTwitterViewCell.h; sourceTree = "<group>"; };
+		E10562291631357400448A30 /* DSTwitterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTwitterViewCell.m; path = Views/DSTwitterViewCell.m; sourceTree = "<group>"; };
+		E105622B1631367F00448A30 /* DSTwitterParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSTwitterParser.h; path = Parser/DSTwitterParser.h; sourceTree = "<group>"; };
+		E105622C1631367F00448A30 /* DSTwitterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTwitterParser.m; path = Parser/DSTwitterParser.m; sourceTree = "<group>"; };
+		E105622E163136AA00448A30 /* DSTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSTwitter.h; path = Models/DSTwitter.h; sourceTree = "<group>"; };
+		E105622F163136AA00448A30 /* DSTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTwitter.m; path = Models/DSTwitter.m; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +151,15 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		E10562271631355A00448A30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E10562281631357400448A30 /* DSTwitterViewCell.h */,
+				E10562291631357400448A30 /* DSTwitterViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		E15C1B7C1630821300575866 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +201,7 @@
 		E15C1B911630821300575866 /* devinsantos */ = {
 			isa = PBXGroup;
 			children = (
+				E10562271631355A00448A30 /* Views */,
 				E10561D31630F5BC00448A30 /* images */,
 				E15C1BC21630994A00575866 /* Parser */,
 				E15C1BBE1630983F00575866 /* Models */,
@@ -231,6 +250,8 @@
 			children = (
 				E15C1BBF1630987D00575866 /* DSEvent.h */,
 				E15C1BC01630987D00575866 /* DSEvent.m */,
+				E105622E163136AA00448A30 /* DSTwitter.h */,
+				E105622F163136AA00448A30 /* DSTwitter.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -240,6 +261,8 @@
 			children = (
 				E15C1BC31630998100575866 /* DSEventParser.h */,
 				E15C1BC41630998100575866 /* DSEventParser.m */,
+				E105622B1631367F00448A30 /* DSTwitterParser.h */,
+				E105622C1631367F00448A30 /* DSTwitterParser.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -369,6 +392,9 @@
 				E17313611630A78700B2C100 /* DSPin.m in Sources */,
 				E10561F61631231500448A30 /* DSSpeakersViewController.m in Sources */,
 				E10561F9163124E000448A30 /* DSTwitterViewController.m in Sources */,
+				E105622A1631357400448A30 /* DSTwitterViewCell.m in Sources */,
+				E105622D1631367F00448A30 /* DSTwitterParser.m in Sources */,
+				E1056230163136AA00448A30 /* DSTwitter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

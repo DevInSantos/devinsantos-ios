@@ -29,6 +29,11 @@
 		E105622A1631357400448A30 /* DSTwitterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562291631357400448A30 /* DSTwitterViewCell.m */; };
 		E105622D1631367F00448A30 /* DSTwitterParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E105622C1631367F00448A30 /* DSTwitterParser.m */; };
 		E1056230163136AA00448A30 /* DSTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = E105622F163136AA00448A30 /* DSTwitter.m */; };
+		E105624016313FB300448A30 /* border.png in Resources */ = {isa = PBXBuildFile; fileRef = E105623C16313FB300448A30 /* border.png */; };
+		E105624116313FB300448A30 /* border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E105623D16313FB300448A30 /* border@2x.png */; };
+		E105624216313FB300448A30 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = E105623E16313FB300448A30 /* center.png */; };
+		E105624316313FB300448A30 /* center@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E105623F16313FB300448A30 /* center@2x.png */; };
+		E10562461631405A00448A30 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562451631405A00448A30 /* LoadingView.m */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -87,6 +92,12 @@
 		E105622C1631367F00448A30 /* DSTwitterParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTwitterParser.m; path = Parser/DSTwitterParser.m; sourceTree = "<group>"; };
 		E105622E163136AA00448A30 /* DSTwitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSTwitter.h; path = Models/DSTwitter.h; sourceTree = "<group>"; };
 		E105622F163136AA00448A30 /* DSTwitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSTwitter.m; path = Models/DSTwitter.m; sourceTree = "<group>"; };
+		E105623C16313FB300448A30 /* border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border.png; sourceTree = "<group>"; };
+		E105623D16313FB300448A30 /* border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border@2x.png"; sourceTree = "<group>"; };
+		E105623E16313FB300448A30 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center.png; sourceTree = "<group>"; };
+		E105623F16313FB300448A30 /* center@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center@2x.png"; sourceTree = "<group>"; };
+		E10562441631405A00448A30 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingView.h; path = Views/LoadingView.h; sourceTree = "<group>"; };
+		E10562451631405A00448A30 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingView.m; path = Views/LoadingView.m; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +148,7 @@
 		E10561D31630F5BC00448A30 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				E105623B16313FB300448A30 /* loadItens */,
 				E10562231631338100448A30 /* logo_bar.png */,
 				E10562241631338100448A30 /* twitter.png */,
 				E10561F01631157800448A30 /* texture.png */,
@@ -154,10 +166,24 @@
 		E10562271631355A00448A30 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E10562441631405A00448A30 /* LoadingView.h */,
+				E10562451631405A00448A30 /* LoadingView.m */,
 				E10562281631357400448A30 /* DSTwitterViewCell.h */,
 				E10562291631357400448A30 /* DSTwitterViewCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E105623B16313FB300448A30 /* loadItens */ = {
+			isa = PBXGroup;
+			children = (
+				E105623C16313FB300448A30 /* border.png */,
+				E105623D16313FB300448A30 /* border@2x.png */,
+				E105623E16313FB300448A30 /* center.png */,
+				E105623F16313FB300448A30 /* center@2x.png */,
+			);
+			name = loadItens;
+			path = images/loadItens;
 			sourceTree = "<group>";
 		};
 		E15C1B7C1630821300575866 = {
@@ -356,6 +382,10 @@
 				E10561F11631157800448A30 /* texture.png in Resources */,
 				E10562251631338100448A30 /* logo_bar.png in Resources */,
 				E10562261631338100448A30 /* twitter.png in Resources */,
+				E105624016313FB300448A30 /* border.png in Resources */,
+				E105624116313FB300448A30 /* border@2x.png in Resources */,
+				E105624216313FB300448A30 /* center.png in Resources */,
+				E105624316313FB300448A30 /* center@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +425,7 @@
 				E105622A1631357400448A30 /* DSTwitterViewCell.m in Sources */,
 				E105622D1631367F00448A30 /* DSTwitterParser.m in Sources */,
 				E1056230163136AA00448A30 /* DSTwitter.m in Sources */,
+				E10562461631405A00448A30 /* LoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

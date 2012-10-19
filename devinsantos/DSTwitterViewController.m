@@ -11,10 +11,12 @@
 #import "AFNetworking.h"
 #import "DSTwitter.h"
 #import "DSTwitterParser.h"
+#import "LoadingView.h"
 
 @interface DSTwitterViewController ()
 {
     NSArray *array;
+    LoadingView *loadingView;
 }
 @end
 
@@ -23,6 +25,7 @@
 - (void)viewDidLoad
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]]];
+    loadingView = [[LoadingView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     [self loadTwitter];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -32,11 +35,14 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://search.twitter.com/search.json?q=devinsantos"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [loadingView showOnView:self.view animated:YES];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         array = [NSArray arrayWithArray:[DSTwitterParser parseTwitterWithJSON:[JSON objectForKey:@"results"]]];
         [self.tableView reloadData];
+        [loadingView hideAnimated:YES];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        
+        [loadingView hideAnimated:YES];
+
     }];
     
     [operation start];

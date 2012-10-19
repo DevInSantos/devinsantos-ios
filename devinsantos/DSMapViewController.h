@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "DSEvent.h"
 
-@interface DSMapViewController : UIViewController
+@interface DSMapViewController : UIViewController <MKMapViewDelegate>
 @property (strong) DSEvent *event;
 @property (weak) IBOutlet MKMapView *mapView;
 @end

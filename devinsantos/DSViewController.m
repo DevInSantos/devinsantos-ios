@@ -11,10 +11,12 @@
 #import "DSEventParser.h"
 #import "DSEvent.h"
 #import "DSMapViewController.h"
+#import "LoadingView.h"
 
 @interface DSViewController ()
 {
     NSArray *array;
+    LoadingView *loadingView;
 }
 - (NSDateComponents *)formatDate:(NSString *)date;
 - (NSString *)dayOfWeek:(int)weekday;
@@ -25,13 +27,18 @@
 
 - (void)loadEvents
 {
+    [loadingView showOnView:self.view animated:YES];
+
     NSURL *url = [NSURL URLWithString:@"http://devinsantos-events.herokuapp.com/events.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         array = [NSArray arrayWithArray:[DSEventParser parseEventWithJSON:JSON]];
         [self mountView];
+        [loadingView hideAnimated:YES];
+
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        
+        [loadingView hideAnimated:YES];
+
     }];
     
     [operation start];
@@ -141,6 +148,7 @@
 
 - (void)viewDidLoad
 {
+    loadingView = [[LoadingView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]]];
     [self loadEvents];
     [super viewDidLoad];

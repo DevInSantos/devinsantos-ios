@@ -62,6 +62,10 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="Wy7-tq-N15">
+                                <rect key="frame" x="20" y="164" width="280" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -69,6 +73,7 @@
                     <connections>
                         <outlet property="addressTextView" destination="ynM-VZ-9MY" id="r0p-6h-ghG"/>
                         <outlet property="dateLabel" destination="WnG-3N-qcN" id="3uC-fr-K1m"/>
+                        <outlet property="scrollView" destination="Wy7-tq-N15" id="Dq1-Nc-JKi"/>
                         <outlet property="titleLabel" destination="EYK-ev-uzI" id="aHx-Hr-drL"/>
                     </connections>
                 </viewController>
@@ -271,6 +276,7 @@
                 <relationship kind="action" name="eventSubscription"/>
                 <relationship kind="outlet" name="addressTextView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>

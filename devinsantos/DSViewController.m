@@ -102,7 +102,6 @@
     if (nextSponsor >= sponsorssArray.count || !nextSponsor) {
         nextSponsor = 0;
     }
-    NSLog(@"%d", nextSponsor);
     [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width * nextSponsor, 0)];
     [self performSelector:_cmd withObject:nil afterDelay:4];
     nextSponsor++;

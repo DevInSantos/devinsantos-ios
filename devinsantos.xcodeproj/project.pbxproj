@@ -46,6 +46,7 @@
 		E105628A1631BF3900448A30 /* speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562891631BF3900448A30 /* speakers.png */; };
 		E105628C1631C4AC00448A30 /* iOS5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */; };
 		E10562921631FAFE00448A30 /* DSSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562911631FAFE00448A30 /* DSSponsor.m */; };
+		E10562951631FB5400448A30 /* DSSponsorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E10562941631FB5400448A30 /* DSSponsorParser.m */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -124,6 +125,8 @@
 		E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iOS5Storyboard.storyboard; path = ../iOS5Storyboard.storyboard; sourceTree = "<group>"; };
 		E10562901631FAFE00448A30 /* DSSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSponsor.h; path = Models/DSSponsor.h; sourceTree = "<group>"; };
 		E10562911631FAFE00448A30 /* DSSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSponsor.m; path = Models/DSSponsor.m; sourceTree = "<group>"; };
+		E10562931631FB5400448A30 /* DSSponsorParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSSponsorParser.h; path = Parser/DSSponsorParser.h; sourceTree = "<group>"; };
+		E10562941631FB5400448A30 /* DSSponsorParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSSponsorParser.m; path = Parser/DSSponsorParser.m; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -369,6 +372,8 @@
 				E15C1BC41630998100575866 /* DSEventParser.m */,
 				E105622B1631367F00448A30 /* DSTwitterParser.h */,
 				E105622C1631367F00448A30 /* DSTwitterParser.m */,
+				E10562931631FB5400448A30 /* DSSponsorParser.h */,
+				E10562941631FB5400448A30 /* DSSponsorParser.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				E10562461631405A00448A30 /* LoadingView.m in Sources */,
 				E10562761631B9C100448A30 /* EGORefreshTableHeaderView.m in Sources */,
 				E10562921631FAFE00448A30 /* DSSponsor.m in Sources */,
+				E10562951631FB5400448A30 /* DSSponsorParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

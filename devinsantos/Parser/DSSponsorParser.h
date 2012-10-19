@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DSSponsorParser : NSObject
++ (NSArray *)parseSponsorWithJSON:(NSArray *)JSON;
 
 @end

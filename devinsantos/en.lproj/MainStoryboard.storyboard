@@ -102,7 +102,7 @@
         <scene sceneID="qvT-3j-CMN">
             <objects>
                 <navigationController definesPresentationContext="YES" id="N7C-gy-fTe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Palestrantes" id="ZIK-m9-CDB"/>
+                    <tabBarItem key="tabBarItem" title="Palestrantes" image="speakers.png" id="ZIK-m9-CDB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQp-wB-XMh">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -151,7 +151,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rr-gF-x8B">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="0rr-gF-x8B">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="EsS-bh-4Zj"/>
                                                         <constraint firstAttribute="width" constant="80" id="Rgp-OY-QwO"/>
@@ -287,6 +287,7 @@
     <resources>
         <image name="Map.png" width="128" height="128"/>
         <image name="logo_bar.png" width="30" height="30"/>
+        <image name="speakers.png" width="30" height="30"/>
         <image name="twitter.png" width="30" height="30"/>
     </resources>
     <classes>

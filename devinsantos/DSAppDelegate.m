@@ -7,13 +7,25 @@
 //
 
 #import "DSAppDelegate.h"
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:(v) options:NSNumericSearch] != NSOrderedAscending)
 
 @implementation DSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    UIStoryboard *mainStoryboard = nil;
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"6.0")) {
+//        mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryBoard" bundle:nil];
+    } else {
+        mainStoryboard = [UIStoryboard storyboardWithName:@"iOS5StoryBoard" bundle:nil];
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = [mainStoryboard instantiateInitialViewController];
+        [self.window makeKeyAndVisible];
+    }
+    
     [self customComponents];
+    
     return YES;
 }
 

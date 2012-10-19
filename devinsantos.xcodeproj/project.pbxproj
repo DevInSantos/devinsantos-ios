@@ -44,6 +44,7 @@
 		E105627D1631B9C100448A30 /* whiteArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562741631B9C100448A30 /* whiteArrow.png */; };
 		E105627E1631B9C100448A30 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562751631B9C100448A30 /* whiteArrow@2x.png */; };
 		E105628A1631BF3900448A30 /* speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = E10562891631BF3900448A30 /* speakers.png */; };
+		E105628C1631C4AC00448A30 /* iOS5Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */; };
 		E15C1B8C1630821300575866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8B1630821300575866 /* UIKit.framework */; };
 		E15C1B8E1630821300575866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8D1630821300575866 /* Foundation.framework */; };
 		E15C1B901630821300575866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E15C1B8F1630821300575866 /* CoreGraphics.framework */; };
@@ -119,6 +120,7 @@
 		E10562741631B9C100448A30 /* whiteArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteArrow.png; sourceTree = "<group>"; };
 		E10562751631B9C100448A30 /* whiteArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whiteArrow@2x.png"; sourceTree = "<group>"; };
 		E10562891631BF3900448A30 /* speakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speakers.png; path = images/speakers.png; sourceTree = "<group>"; };
+		E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iOS5Storyboard.storyboard; path = ../iOS5Storyboard.storyboard; sourceTree = "<group>"; };
 		E15C1B871630821300575866 /* devinsantos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = devinsantos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C1B8B1630821300575866 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E15C1B8D1630821300575866 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -305,7 +307,6 @@
 				E15C1BBE1630983F00575866 /* Models */,
 				E15C1B9A1630821300575866 /* DSAppDelegate.h */,
 				E15C1B9B1630821300575866 /* DSAppDelegate.m */,
-				E15C1BA31630821300575866 /* MainStoryboard.storyboard */,
 				E15C1BA61630821300575866 /* DSViewController.h */,
 				E15C1BA71630821300575866 /* DSViewController.m */,
 				E15C1B921630821300575866 /* Supporting Files */,
@@ -317,6 +318,8 @@
 				E10561F51631231500448A30 /* DSSpeakersViewController.m */,
 				E10561F7163124E000448A30 /* DSTwitterViewController.h */,
 				E10561F8163124E000448A30 /* DSTwitterViewController.m */,
+				E105628B1631C4AC00448A30 /* iOS5Storyboard.storyboard */,
+				E15C1BA31630821300575866 /* MainStoryboard.storyboard */,
 			);
 			path = devinsantos;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				E105627D1631B9C100448A30 /* whiteArrow.png in Resources */,
 				E105627E1631B9C100448A30 /* whiteArrow@2x.png in Resources */,
 				E105628A1631BF3900448A30 /* speakers.png in Resources */,
+				E105628C1631C4AC00448A30 /* iOS5Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

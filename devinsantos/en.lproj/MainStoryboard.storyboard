@@ -140,6 +140,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-m3-sgR">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" type="user" id="tPC-FP-SJr"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="gf3-sa-TYB" customClass="DSTwitterViewCell">
                                         <rect key="frame" x="0.0" y="22" width="320" height="100"/>
@@ -199,9 +202,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Q2a-m3-sgR" firstAttribute="leading" secondItem="7vu-oN-Eaz" secondAttribute="leading" type="default" id="2TL-cR-p0M"/>
+                            <constraint firstItem="Q2a-m3-sgR" firstAttribute="leading" secondItem="7vu-oN-Eaz" secondAttribute="leading" type="user" id="2TL-cR-p0M"/>
                             <constraint firstItem="Q2a-m3-sgR" firstAttribute="bottom" secondItem="7vu-oN-Eaz" secondAttribute="bottom" type="default" id="FNH-wU-B71"/>
-                            <constraint firstItem="Q2a-m3-sgR" firstAttribute="trailing" secondItem="7vu-oN-Eaz" secondAttribute="trailing" type="default" id="iad-Ty-9XL"/>
+                            <constraint firstItem="Q2a-m3-sgR" firstAttribute="trailing" secondItem="7vu-oN-Eaz" secondAttribute="trailing" type="user" id="iad-Ty-9XL"/>
                             <constraint firstItem="Q2a-m3-sgR" firstAttribute="top" secondItem="7vu-oN-Eaz" secondAttribute="top" type="default" id="mKP-Ma-7Rh"/>
                         </constraints>
                     </view>

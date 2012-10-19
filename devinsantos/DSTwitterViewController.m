@@ -17,6 +17,8 @@
 {
     NSArray *array;
     LoadingView *loadingView;
+    EGORefreshTableHeaderView *_refreshHeaderView;
+	BOOL _reloading;
 }
 @end
 
@@ -26,7 +28,18 @@
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]]];
     loadingView = [[LoadingView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    [self loadTwitter];
+    [self reloadTableViewDataSource];
+    
+    if (_refreshHeaderView == nil) {
+		
+		EGORefreshTableHeaderView *view = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0, 0, 320, self.tableView.bounds.size.height)];
+		view.delegate = self;
+		[self.tableView addSubview:view];
+		_refreshHeaderView = view;
+		
+	}
+	[_refreshHeaderView refreshLastUpdatedDate];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -35,13 +48,11 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://search.twitter.com/search.json?q=devinsantos"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [loadingView showOnView:self.navigationController.view animated:YES];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         array = [NSArray arrayWithArray:[DSTwitterParser parseTwitterWithJSON:[JSON objectForKey:@"results"]]];
         [self.tableView reloadData];
-        [loadingView hideAnimated:YES];
+        [self doneLoadingTableViewData];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        [loadingView hideAnimated:YES];
 
     }];
     
@@ -94,4 +105,53 @@
     [self setTableView:nil];
     [super viewDidUnload];
 }
+
+#pragma mark -
+#pragma mark Data Source Loading / Reloading Methods
+
+- (void)reloadTableViewDataSource
+{
+    [self loadTwitter];
+    [loadingView showOnView:self.navigationController.view animated:YES];
+	_reloading = YES;
+	
+}
+
+- (void)doneLoadingTableViewData
+{
+	_reloading = NO;
+    [loadingView hideAnimated:YES];
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+	
+}
+
+#pragma mark - UIScrollViewDelegate Methods
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+}
+
+
+#pragma mark - EGORefreshTableHeaderDelegate 
+
+- (void)egoRefreshTableHeaderDidTriggerRefresh:(EGORefreshTableHeaderView*)view
+{
+	[self reloadTableViewDataSource];
+	[self performSelector:@selector(doneLoadingTableViewData) withObject:nil afterDelay:3.0];
+	
+}
+
+- (BOOL)egoRefreshTableHeaderDataSourceIsLoading:(EGORefreshTableHeaderView*)view
+{
+	return _reloading;
+	
+}
+
+- (NSDate*)egoRefreshTableHeaderDataSourceLastUpdated:(EGORefreshTableHeaderView*)view
+{
+	return [NSDate date];
+	
+}
+
 @end

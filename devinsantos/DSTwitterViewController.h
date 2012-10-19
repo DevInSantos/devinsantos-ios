@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LoadingView.h"
+#import "EGORefreshTableHeaderView.h"
 
-@interface DSTwitterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface DSTwitterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, EGORefreshTableHeaderDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

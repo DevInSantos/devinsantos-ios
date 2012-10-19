@@ -35,7 +35,7 @@
 {
     NSURL *url = [NSURL URLWithString:@"http://search.twitter.com/search.json?q=devinsantos"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [loadingView showOnView:self.view animated:YES];
+    [loadingView showOnView:self.navigationController.view animated:YES];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         array = [NSArray arrayWithArray:[DSTwitterParser parseTwitterWithJSON:[JSON objectForKey:@"results"]]];
         [self.tableView reloadData];

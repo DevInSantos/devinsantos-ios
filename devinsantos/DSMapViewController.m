@@ -56,8 +56,7 @@
 
 - (void)mapViewWillStartLoadingMap:(MKMapView *)mapView
 {
-    [loadingView showOnView:self.view animated:YES];
-    
+    [loadingView showOnView:self.navigationController.view animated:YES];
 }
 
 - (void)mapViewDidFinishLoadingMap:(MKMapView *)mapView

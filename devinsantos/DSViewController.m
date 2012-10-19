@@ -27,7 +27,7 @@
 
 - (void)loadEvents
 {
-    [loadingView showOnView:self.view animated:YES];
+    [loadingView showOnView:self.navigationController.view animated:YES];
 
     NSURL *url = [NSURL URLWithString:@"http://devinsantos-events.herokuapp.com/events.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

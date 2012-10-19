@@ -1,11 +1,14 @@
 
 PODS:
 - AFNetworking (1.0)
+- AQGridView (1.3)
 
 DEPENDENCIES:
 - AFNetworking
+- AQGridView
 
 SPEC CHECKSUMS:
   AFNetworking: 758a1cb1ab5a0d22795ba1c44abb9cad395bc126
+  AQGridView: ee436c64bc4a972ca7f3ce99971c0204af9e65ea
 
-COCOAPODS: 0.15.1
+COCOAPODS: 0.15.2

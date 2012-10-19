@@ -98,6 +98,37 @@
             </objects>
             <point key="canvasLocation" x="1350" y="-1405"/>
         </scene>
+        <!--Navigation Controller - Palestrantes-->
+        <scene sceneID="qvT-3j-CMN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="N7C-gy-fTe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Palestrantes" id="ZIK-m9-CDB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WQp-wB-XMh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y84-GO-oUX" kind="relationship" relationship="rootViewController" id="8WO-cD-ceC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mu2-4U-QIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="-703"/>
+        </scene>
+        <!--Speakers View Controller-->
+        <scene sceneID="muc-MA-wUp">
+            <objects>
+                <viewController id="y84-GO-oUX" customClass="DSSpeakersViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTa-RW-ska">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RTf-E0-LhG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpP-Nc-Ffq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="-703"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="hgx-ib-tnR">
             <objects>
@@ -137,6 +168,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="XA2-3M-JBj" kind="relationship" relationship="viewControllers" id="bgM-x5-viC"/>
+                        <segue destination="N7C-gy-fTe" kind="relationship" relationship="viewControllers" id="for-04-8VP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsY-j8-QAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +185,9 @@
             <relationships>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
+        </class>
+        <class className="DSSpeakersViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DSSpeakersViewController.h"/>
         </class>
         <class className="DSViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DSViewController.h"/>

@@ -39,17 +39,94 @@
 {
     DSEvent *event = [array objectAtIndex:0];
     NSDateComponents *dateComponents = [self formatDate:event.date];
-    self.calendarDay.text = [NSString stringWithFormat:@"%02i", dateComponents.day];
-    
+    self.titleLabel.text = event.name;
+    self.addressTextView.text = event.address;
+    self.dateLabel.text = [NSString stringWithFormat:@"%@, %02i de %@, %d", [self dayOfWeek:dateComponents.weekday], dateComponents.day ,[self month:dateComponents.month], dateComponents.year];    
 }
 
+- (NSString *)month:(int)month
+{
+    NSString *_month;
+    switch (month) {
+        case 1:
+            _month = @"Janeiro";
+            break;
+        case 2:
+            _month = @"Fevereiro";
+            break;
+        case 3:
+            _month = @"Março";
+            break;
+        case 4:
+            _month = @"Abril";
+            break;
+        case 5:
+            _month = @"Maio";
+            break;
+        case 6:
+            _month = @"Junho";
+            break;
+        case 7:
+            _month = @"Julho";
+            break;
+        case 8:
+            _month = @"Agosto";
+            break;
+        case 9:
+            _month = @"Setembro";
+            break;
+        case 10:
+            _month = @"Outubro";
+            break;
+        case 11:
+            _month = @"Novembro";
+            break;
+        case 12:
+            _month = @"Dezembro";
+            break;
+        default:
+            break;
+    }
+    return _month;
+}
+- (NSString *)dayOfWeek:(int)weekday
+{
+    NSString *dayOfWeek;
+    
+    switch (weekday) {
+        case 1:
+            dayOfWeek = @"Domingo";
+            break;
+        case 2:
+            dayOfWeek = @"Segunda";
+            break;
+        case 3:
+            dayOfWeek = @"Terça";
+            break;
+        case 4:
+            dayOfWeek = @"Quarta";
+            break;
+        case 5:
+            dayOfWeek = @"Quinta";
+            break;
+        case 6:
+            dayOfWeek = @"Sexta";
+            break;
+        case 7:
+            dayOfWeek = @"Sábado";
+            break;            
+        default:
+            break;
+    }
+    return dayOfWeek;
+}
 - (NSDateComponents *)formatDate:(NSString *)date
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'-02:00'"];
     NSDate *_date = [dateFormatter dateFromString:date];
     
-    NSUInteger flags = NSDayCalendarUnit | kCFCalendarUnitMonth | kCFCalendarUnitYear| NSHourCalendarUnit | NSMinuteCalendarUnit;
+    NSUInteger flags = NSDayCalendarUnit | kCFCalendarUnitMonth | kCFCalendarUnitWeekday| kCFCalendarUnitYear| NSHourCalendarUnit | NSMinuteCalendarUnit;
     
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:flags fromDate:_date];
     
@@ -57,6 +134,7 @@
 }
 - (void)viewDidLoad
 {
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]]];
     [self loadEvents];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -69,8 +147,9 @@
 }
 
 - (void)viewDidUnload {
-    [self setScrollView:nil];
-    [self setCalendarDay:nil];
+    [self setTitleLabel:nil];
+    [self setDateLabel:nil];
+    [self setAddressTextView:nil];
     [super viewDidUnload];
 }
 

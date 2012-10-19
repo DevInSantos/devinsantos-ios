@@ -17,6 +17,8 @@
     NSArray *array;
 }
 - (NSDateComponents *)formatDate:(NSString *)date;
+- (NSString *)dayOfWeek:(int)weekday;
+- (NSString *)month:(int)month;
 @end
 
 @implementation DSViewController
@@ -43,6 +45,8 @@
     self.addressTextView.text = event.address;
     self.dateLabel.text = [NSString stringWithFormat:@"%@, %02i de %@, %d", [self dayOfWeek:dateComponents.weekday], dateComponents.day ,[self month:dateComponents.month], dateComponents.year];    
 }
+
+#pragma mark - DateComponents
 
 - (NSString *)month:(int)month
 {
@@ -89,6 +93,7 @@
     }
     return _month;
 }
+
 - (NSString *)dayOfWeek:(int)weekday
 {
     NSString *dayOfWeek;
@@ -120,6 +125,7 @@
     }
     return dayOfWeek;
 }
+
 - (NSDateComponents *)formatDate:(NSString *)date
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -132,6 +138,7 @@
     
     return dateComponents;
 }
+
 - (void)viewDidLoad
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]]];
